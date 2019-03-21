@@ -58,4 +58,8 @@ typings/
 .env
 
 # next.js build output
-.next
+.next.js
+
+.secret
+.infura-secret
+.DS_Store

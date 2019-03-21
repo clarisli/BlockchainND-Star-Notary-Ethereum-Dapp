@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StarNotary DAPP</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <style>
+    input {
+      display: block;
+      margin-bottom: 12px;
+    }
+    .status{
+      display: block;
+    }     
+    .status:empty{
+      display: none;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <span class="navbar-brand mb-0 h1 mx-auto">StarNotary DAPP</span>
+    </nav>
+    <div class="p-5">
+      <div class="container" class="mx-auto" style="width: 500px;">
+        <h2>Create a Star</h2>
+        <div class="alert alert-primary status" role="alert" id="status-create"></div>
+        <form>
+          <div class="form-group">
+            <label for="starName">Star Name</label>
+            <input type="text" class="form-control" id="starName" placeholder="ex. Awesome Star"></input>
+          </div>
+          <div class="form-group">
+            <label for="starId">Star ID</label>
+            <input type="text" class="form-control" id="starId" placeholder="ex. 1"></input>
+          </div>
+          <button type="button" onclick="App.createStar()" class="btn btn-primary">Create Star</button>
+        </form>
+      </div>
+    </div>
+    <div class="bg-light p-5">
+      <div class="container" class="mx-auto" style="width: 500px;">
+        <h2>Look up a Star</h2>
+        <div class="alert alert-primary status mt-3" role="alert" id="status-lookup"></div>
+        <form>
+          <div class="form-group">
+            <label for="name">Star ID</label>
+            <input type="text" class="form-control" id="lookid" placeholder="ex. 1"></input>
+          </div>
+          <button type="button" onclick="App.lookUp()" class="btn btn-primary" >Look Up a Star</button>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
